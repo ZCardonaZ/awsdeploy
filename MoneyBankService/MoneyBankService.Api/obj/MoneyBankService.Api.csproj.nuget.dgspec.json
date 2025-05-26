@@ -35,8 +35,8 @@
               "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Application\\MoneyBankService.Application.csproj": {
                 "projectPath": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Application\\MoneyBankService.Application.csproj"
               },
-              "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj"
+              "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj"
               }
             }
           }
@@ -291,14 +291,14 @@
         }
       }
     },
-    "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj": {
+    "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj",
         "projectName": "MoneyBankService.Infrastructure",
-        "projectPath": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

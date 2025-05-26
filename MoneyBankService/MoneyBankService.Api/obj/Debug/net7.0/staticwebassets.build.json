@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SZR0rFLCdfM4Q1G2u4JxwDlya3Irt6M5I7SeLReLQOw=",
+  "Hash": "jo/iJdS4cjHl/J83/cfbo6XJRIGegU5ndsAFE1Us5vA=",
   "Source": "MoneyBankService.Api",
   "BasePath": "_content/MoneyBankService.Api",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hgbqyuhaqe",
-      "Integrity": "geZJ1wq0oe9MSZNMvvPIQk3kRi86D3bFV1LRqUWv+ZQ=",
+      "Fingerprint": "pmd831y04m",
+      "Integrity": "AZ65m4nu1DIU3cZEs6/wXSk5at41btJum7f+zWoQgMo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "gptkbccaxs",
-      "Integrity": "nFETswCw+/bOgEAzOooid1IBvsI/9+e/t97VCJ72sEg=",
+      "Fingerprint": "gghmm2k71y",
+      "Integrity": "4B+TR3upbGAEgHczX/HACjYLmpIh9t9EkYA4Kqm4Uf0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "y4lic5nsaz",
-      "Integrity": "gmsF57oitiUZNSv54cteydmz1UWNxM1ov49g1Rcy6Vo=",
+      "Fingerprint": "5tlkje45l8",
+      "Integrity": "l+kcfATbh6qHD2FxFb5gZRN4skpB3nK3nJ8q53wO9oY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\app.js"
@@ -92,7 +92,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2511"
+          "Value": "3039"
         },
         {
           "Name": "Content-Type",
@@ -100,11 +100,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"geZJ1wq0oe9MSZNMvvPIQk3kRi86D3bFV1LRqUWv+ZQ=\""
+          "Value": "\"AZ65m4nu1DIU3cZEs6/wXSk5at41btJum7f+zWoQgMo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 18:16:24 GMT"
+          "Value": "Mon, 26 May 2025 20:22:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -114,12 +114,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-geZJ1wq0oe9MSZNMvvPIQk3kRi86D3bFV1LRqUWv+ZQ="
+          "Value": "sha256-AZ65m4nu1DIU3cZEs6/wXSk5at41btJum7f+zWoQgMo="
         }
       ]
     },
     {
-      "Route": "css/style.hgbqyuhaqe.css",
+      "Route": "css/style.pmd831y04m.css",
       "AssetFile": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Api\\wwwroot\\css\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -129,7 +129,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2511"
+          "Value": "3039"
         },
         {
           "Name": "Content-Type",
@@ -137,11 +137,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"geZJ1wq0oe9MSZNMvvPIQk3kRi86D3bFV1LRqUWv+ZQ=\""
+          "Value": "\"AZ65m4nu1DIU3cZEs6/wXSk5at41btJum7f+zWoQgMo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 18:16:24 GMT"
+          "Value": "Mon, 26 May 2025 20:22:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -151,7 +151,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hgbqyuhaqe"
+          "Value": "pmd831y04m"
         },
         {
           "Name": "label",
@@ -159,12 +159,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-geZJ1wq0oe9MSZNMvvPIQk3kRi86D3bFV1LRqUWv+ZQ="
+          "Value": "sha256-AZ65m4nu1DIU3cZEs6/wXSk5at41btJum7f+zWoQgMo="
         }
       ]
     },
     {
-      "Route": "index.gptkbccaxs.html",
+      "Route": "index.gghmm2k71y.html",
       "AssetFile": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Api\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -174,7 +174,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4112"
+          "Value": "4222"
         },
         {
           "Name": "Content-Type",
@@ -182,11 +182,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nFETswCw+/bOgEAzOooid1IBvsI/9+e/t97VCJ72sEg=\""
+          "Value": "\"4B+TR3upbGAEgHczX/HACjYLmpIh9t9EkYA4Kqm4Uf0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 18:16:16 GMT"
+          "Value": "Mon, 26 May 2025 20:19:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -196,7 +196,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gptkbccaxs"
+          "Value": "gghmm2k71y"
         },
         {
           "Name": "label",
@@ -204,7 +204,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nFETswCw+/bOgEAzOooid1IBvsI/9+e/t97VCJ72sEg="
+          "Value": "sha256-4B+TR3upbGAEgHczX/HACjYLmpIh9t9EkYA4Kqm4Uf0="
         }
       ]
     },
@@ -219,7 +219,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4112"
+          "Value": "4222"
         },
         {
           "Name": "Content-Type",
@@ -227,11 +227,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nFETswCw+/bOgEAzOooid1IBvsI/9+e/t97VCJ72sEg=\""
+          "Value": "\"4B+TR3upbGAEgHczX/HACjYLmpIh9t9EkYA4Kqm4Uf0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 18:16:16 GMT"
+          "Value": "Mon, 26 May 2025 20:19:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -241,7 +241,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nFETswCw+/bOgEAzOooid1IBvsI/9+e/t97VCJ72sEg="
+          "Value": "sha256-4B+TR3upbGAEgHczX/HACjYLmpIh9t9EkYA4Kqm4Uf0="
+        }
+      ]
+    },
+    {
+      "Route": "js/app.5tlkje45l8.js",
+      "AssetFile": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Api\\wwwroot\\js\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15073"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l+kcfATbh6qHD2FxFb5gZRN4skpB3nK3nJ8q53wO9oY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 May 2025 20:21:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5tlkje45l8"
+        },
+        {
+          "Name": "label",
+          "Value": "js/app.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l+kcfATbh6qHD2FxFb5gZRN4skpB3nK3nJ8q53wO9oY="
         }
       ]
     },
@@ -256,7 +301,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12456"
+          "Value": "15073"
         },
         {
           "Name": "Content-Type",
@@ -264,11 +309,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gmsF57oitiUZNSv54cteydmz1UWNxM1ov49g1Rcy6Vo=\""
+          "Value": "\"l+kcfATbh6qHD2FxFb5gZRN4skpB3nK3nJ8q53wO9oY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 20:12:04 GMT"
+          "Value": "Mon, 26 May 2025 20:21:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -278,52 +323,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gmsF57oitiUZNSv54cteydmz1UWNxM1ov49g1Rcy6Vo="
-        }
-      ]
-    },
-    {
-      "Route": "js/app.y4lic5nsaz.js",
-      "AssetFile": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Api\\wwwroot\\js\\app.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12456"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gmsF57oitiUZNSv54cteydmz1UWNxM1ov49g1Rcy6Vo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 20:12:04 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "y4lic5nsaz"
-        },
-        {
-          "Name": "label",
-          "Value": "js/app.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gmsF57oitiUZNSv54cteydmz1UWNxM1ov49g1Rcy6Vo="
+          "Value": "sha256-l+kcfATbh6qHD2FxFb5gZRN4skpB3nK3nJ8q53wO9oY="
         }
       ]
     }
