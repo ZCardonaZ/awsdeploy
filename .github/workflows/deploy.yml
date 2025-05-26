@@ -39,4 +39,4 @@ jobs:
         docker rm dotnet-api || true
 
     - name: Run new container
-      run: docker run -d --name dotnet-api --network awsdeploy -p 80:8080 ${{ secrets.DOCKER_USERNAME }}/dotnet-api:latest
+      run: docker run -d --name dotnet-api --network awsdeploy -p 80:80 ${{ secrets.DOCKER_USERNAME }}/dotnet-api:latest
