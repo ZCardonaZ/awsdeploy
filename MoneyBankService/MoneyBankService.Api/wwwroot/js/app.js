@@ -1,7 +1,4 @@
-// IMPORTANTE: Reemplaza 'TU_IP_O_DOMINIO_EC2' con la IP pública de tu instancia EC2 o tu dominio si tienes uno configurado.
-// Si tu API está corriendo en un puerto diferente al 80 (HTTP) o 443 (HTTPS), ajústalo también.
-// Basado en tu deploy.yml, tu API Dockerizada escucha en el puerto 80 dentro de la red 'awsdeploy'.
-// Si accedes directamente desde internet, será el puerto 80 de tu EC2 (asumiendo que lo tienes mapeado).
+
 const API_BASE_URL = 'http://44.201.83.128/api/accounts';
 
 // Elementos del DOM
@@ -18,6 +15,8 @@ const balanceAmountInput = document.getElementById('balanceAmount');
 const formTitle = document.getElementById('form-title');
 const formFeedback = document.getElementById('form-feedback');
 const clearFormBtn = document.getElementById('clear-form-btn');
+const formSection = document.getElementById('form-section'); 
+
 
 const transactionForm = document.getElementById('transaction-form');
 const transactionAccountIdInput = document.getElementById('transactionAccountId');
