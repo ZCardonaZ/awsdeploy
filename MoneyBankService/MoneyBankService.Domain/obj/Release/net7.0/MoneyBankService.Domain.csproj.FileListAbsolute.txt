@@ -1,0 +1,11 @@
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\bin\Release\net7.0\MoneyBankService.Domain.deps.json
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\bin\Release\net7.0\MoneyBankService.Domain.dll
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\bin\Release\net7.0\MoneyBankService.Domain.pdb
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\obj\Release\net7.0\MoneyBankService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\obj\Release\net7.0\MoneyBankService.Domain.AssemblyInfoInputs.cache
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\obj\Release\net7.0\MoneyBankService.Domain.AssemblyInfo.cs
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\obj\Release\net7.0\MoneyBankService.Domain.csproj.CoreCompileInputs.cache
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\obj\Release\net7.0\MoneyBankService.Domain.dll
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\obj\Release\net7.0\refint\MoneyBankService.Domain.dll
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\obj\Release\net7.0\MoneyBankService.Domain.pdb
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Domain\obj\Release\net7.0\ref\MoneyBankService.Domain.dll

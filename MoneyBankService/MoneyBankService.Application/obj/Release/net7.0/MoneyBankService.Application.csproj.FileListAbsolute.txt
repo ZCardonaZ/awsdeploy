@@ -1,0 +1,15 @@
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\bin\Release\net7.0\MoneyBankService.Application.deps.json
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\bin\Release\net7.0\MoneyBankService.Application.dll
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\bin\Release\net7.0\MoneyBankService.Application.pdb
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\bin\Release\net7.0\MoneyBankService.Domain.dll
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\bin\Release\net7.0\MoneyBankService.Domain.pdb
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\MoneyBankService.Application.csproj.AssemblyReference.cache
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\MoneyBankService.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\MoneyBankService.Application.AssemblyInfoInputs.cache
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\MoneyBankService.Application.AssemblyInfo.cs
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\MoneyBankService.Application.csproj.CoreCompileInputs.cache
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\MoneyBan.8FEA3CD9.Up2Date
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\MoneyBankService.Application.dll
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\refint\MoneyBankService.Application.dll
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\MoneyBankService.Application.pdb
+C:\Users\santi\Desktop\Moneyy\MoneyBankService\MoneyBankService.Application\obj\Release\net7.0\ref\MoneyBankService.Application.dll

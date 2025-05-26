@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "RCqbKNSfSKbmtQYZXgimlrE8b3M5+3DJ510Zo0LR6tY=",
+  "Source": "MoneyBankService.Api",
+  "BasePath": "_content/MoneyBankService.Api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

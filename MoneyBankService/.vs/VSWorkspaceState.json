@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MoneyBankService.Api",
+    "\\MoneyBankService.Api\\Controllers",
+    "\\MoneyBankService.Api\\Extensions",
+    "\\MoneyBankService.Api\\Mappers",
+    "\\MoneyBankService.Api\\Properties",
+    "\\MoneyBankService.Api\\Validators",
+    "\\MoneyBankService.Application",
+    "\\MoneyBankService.Domain",
+    "\\MoneyBankService.Infrastructure"
+  ],
+  "PreviewInSolutionExplorer": false
+}
