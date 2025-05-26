@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RNDG60/BwdA=",
+  "dgSpecHash": "AdPdA9oHt1M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\santi\\Desktop\\Moneyy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj",
+  "projectFilePath": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",

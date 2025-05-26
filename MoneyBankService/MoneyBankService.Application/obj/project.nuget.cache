@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W6TJaddui/U=",
+  "dgSpecHash": "moOeKjuZEbs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\santi\\Desktop\\Moneyy\\MoneyBankService\\MoneyBankService.Application\\MoneyBankService.Application.csproj",
+  "projectFilePath": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Application\\MoneyBankService.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
