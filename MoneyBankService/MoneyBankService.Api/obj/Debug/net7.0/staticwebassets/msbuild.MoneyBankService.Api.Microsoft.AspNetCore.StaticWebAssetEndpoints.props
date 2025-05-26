@@ -1,0 +1,40 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/MoneyBankService.Api/css/style.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-geZJ1wq0oe9MSZNMvvPIQk3kRi86D3bFV1LRqUWv\u002BZQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2511"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022geZJ1wq0oe9MSZNMvvPIQk3kRi86D3bFV1LRqUWv\u002BZQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 26 May 2025 18:16:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MoneyBankService.Api/css/style.hgbqyuhaqe.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\style.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"hgbqyuhaqe"},{"Name":"integrity","Value":"sha256-geZJ1wq0oe9MSZNMvvPIQk3kRi86D3bFV1LRqUWv\u002BZQ="},{"Name":"label","Value":"_content/MoneyBankService.Api/css/style.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2511"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022geZJ1wq0oe9MSZNMvvPIQk3kRi86D3bFV1LRqUWv\u002BZQ=\u0022"},{"Name":"Last-Modified","Value":"Mon, 26 May 2025 18:16:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MoneyBankService.Api/index.gptkbccaxs.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gptkbccaxs"},{"Name":"integrity","Value":"sha256-nFETswCw\u002B/bOgEAzOooid1IBvsI/9\u002Be/t97VCJ72sEg="},{"Name":"label","Value":"_content/MoneyBankService.Api/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4112"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022nFETswCw\u002B/bOgEAzOooid1IBvsI/9\u002Be/t97VCJ72sEg=\u0022"},{"Name":"Last-Modified","Value":"Mon, 26 May 2025 18:16:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MoneyBankService.Api/index.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-nFETswCw\u002B/bOgEAzOooid1IBvsI/9\u002Be/t97VCJ72sEg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4112"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022nFETswCw\u002B/bOgEAzOooid1IBvsI/9\u002Be/t97VCJ72sEg=\u0022"},{"Name":"Last-Modified","Value":"Mon, 26 May 2025 18:16:16 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MoneyBankService.Api/js/app.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\app.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gmsF57oitiUZNSv54cteydmz1UWNxM1ov49g1Rcy6Vo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"12456"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022gmsF57oitiUZNSv54cteydmz1UWNxM1ov49g1Rcy6Vo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 26 May 2025 20:12:04 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MoneyBankService.Api/js/app.y4lic5nsaz.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\app.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"y4lic5nsaz"},{"Name":"integrity","Value":"sha256-gmsF57oitiUZNSv54cteydmz1UWNxM1ov49g1Rcy6Vo="},{"Name":"label","Value":"_content/MoneyBankService.Api/js/app.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12456"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022gmsF57oitiUZNSv54cteydmz1UWNxM1ov49g1Rcy6Vo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 26 May 2025 20:12:04 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

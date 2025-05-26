@@ -20,7 +20,7 @@ header h1 {
 
 main {
     padding: 20px;
-    max-width: 900px;
+    max-width: 1100px; /* Ajustado para más columnas */
     margin: 20px auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -93,6 +93,7 @@ th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
+    word-break: break-word; /* Para evitar que el contenido largo rompa el layout */
 }
 
 th {
@@ -107,6 +108,19 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #f1f1f1;
 }
+
+/* Estilo para filas de cuentas que usan sobregiro */
+tbody tr.overdraft-active {
+    background-color: #fff3cd; /* Un amarillo claro como advertencia */
+}
+tbody tr.overdraft-active:hover {
+    background-color: #ffeeba;
+}
+tbody tr.overdraft-active td {
+    /* Podrías agregar estilos específicos a las celdas si es necesario,
+       por ejemplo, para la columna "Sobregiro Utilizado" */
+}
+
 
 hr {
     border: 0;

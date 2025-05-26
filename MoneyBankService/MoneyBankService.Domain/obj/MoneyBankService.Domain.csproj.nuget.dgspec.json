@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj": {}
+    "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj": {
+    "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj",
+        "projectUniqueName": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj",
         "projectName": "MoneyBankService.Domain",
-        "projectPath": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj",
+        "projectPath": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\MoneyBankService.Domain.csproj",
         "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\obj\\",
+        "outputPath": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

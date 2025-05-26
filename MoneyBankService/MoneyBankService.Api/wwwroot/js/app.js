@@ -1,5 +1,8 @@
-
+// IMPORTANTE: Reemplaza 'TU_IP_O_DOMINIO_EC2' con la IP pública de tu instancia EC2 o tu dominio si tienes uno configurado.
+// Basado en tu deploy.yml, tu API Dockerizada escucha en el puerto 80 dentro de la red 'awsdeploy'.
+// Si accedes directamente desde internet, será el puerto 80 de tu EC2 (asumiendo que lo tienes mapeado).
 const API_BASE_URL = 'http://44.201.83.128/api/accounts';
+const MAX_OVERDRAFT_FRONTEND = 1000000; // Debe coincidir con el MAX_OVERDRAFT del backend
 
 // Elementos del DOM
 const loadAccountsBtn = document.getElementById('load-accounts-btn');
@@ -11,12 +14,11 @@ const accountIdInput = document.getElementById('accountId');
 const accountNumberInput = document.getElementById('accountNumber');
 const ownerNameInput = document.getElementById('ownerName');
 const accountTypeInput = document.getElementById('accountType');
-const balanceAmountInput = document.getElementById('balanceAmount');
+const balanceAmountInput = document.getElementById('balanceAmount'); // Este es el Saldo Inicial (Aporte Propio) en el form
 const formTitle = document.getElementById('form-title');
 const formFeedback = document.getElementById('form-feedback');
 const clearFormBtn = document.getElementById('clear-form-btn');
-const formSection = document.getElementById('form-section'); 
-
+const formSection = document.getElementById('form-section'); // Asegúrate que esta línea exista (la agregamos antes)
 
 const transactionForm = document.getElementById('transaction-form');
 const transactionAccountIdInput = document.getElementById('transactionAccountId');
@@ -56,7 +58,7 @@ async function fetchAccounts() {
         const accounts = await response.json();
         
         if (accounts.length === 0) {
-            accountsTableBody.innerHTML = '<tr><td colspan="8" style="text-align:center;">No hay cuentas para mostrar.</td></tr>';
+            accountsTableBody.innerHTML = '<tr><td colspan="9" style="text-align:center;">No hay cuentas para mostrar.</td></tr>'; // colspan actualizado a 9
         } else {
             accounts.forEach(account => {
                 const row = accountsTableBody.insertRow();
@@ -65,13 +67,35 @@ async function fetchAccounts() {
                     year: 'numeric', month: '2-digit', day: '2-digit'
                 });
 
+                let saldoPropio = 0;
+                let sobregiroUtilizado = parseFloat(account.overdraftAmount);
+                let cupoSobregiroDisp = 0;
+                let saldoActualNeto = parseFloat(account.balanceAmount); // Este es el balanceAmount de la BD
+
+                if (account.accountType === 'C') {
+                    // El balanceAmount de la BD para cuentas 'C' incluye el MAX_OVERDRAFT
+                    // Saldo Propio = Balance BD - MAX_OVERDRAFT_FRONTEND
+                    saldoPropio = saldoActualNeto - MAX_OVERDRAFT_FRONTEND;
+                    cupoSobregiroDisp = MAX_OVERDRAFT_FRONTEND - sobregiroUtilizado;
+                } else { // Para cuentas 'A' (Ahorros)
+                    saldoPropio = saldoActualNeto; // El balance de la BD es el saldo propio
+                    sobregiroUtilizado = 0; // No tienen sobregiro
+                    cupoSobregiroDisp = 0; // No tienen sobregiro
+                }
+                
+                // Añadir clase si está en sobregiro para estilos
+                if (account.accountType === 'C' && sobregiroUtilizado > 0) {
+                    row.classList.add('overdraft-active');
+                }
+
                 row.innerHTML = `
                     <td>${account.id}</td>
                     <td>${account.accountNumber}</td>
                     <td>${account.ownerName}</td>
                     <td>${account.accountType === 'A' ? 'Ahorros' : 'Corriente'}</td>
-                    <td>${parseFloat(account.balanceAmount).toFixed(2)}</td>
-                    <td>${parseFloat(account.overdraftAmount).toFixed(2)}</td>
+                    <td>${parseFloat(saldoPropio).toFixed(2)}</td>
+                    <td>${parseFloat(sobregiroUtilizado).toFixed(2)}</td>
+                    <td>${parseFloat(cupoSobregiroDisp).toFixed(2)}</td>
                     <td>${creationDate}</td>
                     <td>
                         <button onclick="loadAccountForEdit(${account.id})">Editar</button>
@@ -83,7 +107,7 @@ async function fetchAccounts() {
     } catch (error) {
         console.error('Error al obtener cuentas:', error);
         showFeedback(formFeedback, `Error al cargar cuentas: ${error.message}`, true);
-        accountsTableBody.innerHTML = `<tr><td colspan="8" style="text-align:center;">Error al cargar cuentas: ${error.message}</td></tr>`;
+        accountsTableBody.innerHTML = `<tr><td colspan="9" style="text-align:center;">Error al cargar cuentas: ${error.message}</td></tr>`; // colspan actualizado a 9
     } finally {
         showLoading(false);
     }
@@ -95,6 +119,7 @@ function clearAccountForm() {
     formTitle.textContent = 'Crear Nueva Cuenta';
     formFeedback.style.display = 'none';
     balanceAmountInput.readOnly = false; 
+    // No es necesario resetear un campo de sobregiro en el formulario ya que no lo tenemos para edición directa.
 }
 
 async function handleAccountFormSubmit(event) {
@@ -102,14 +127,16 @@ async function handleAccountFormSubmit(event) {
     formFeedback.style.display = 'none';
 
     const accountId = accountIdInput.value;
+    // El valor de balanceAmountInput es el "Saldo Inicial (Aporte Propio)"
+    const aportePropio = parseFloat(balanceAmountInput.value);
+
+
     const accountData = {
         accountNumber: accountNumberInput.value,
         ownerName: ownerNameInput.value,
         accountType: accountTypeInput.value,
-        balanceAmount: parseFloat(balanceAmountInput.value),
-        // El backend maneja el overdraftAmount, especialmente en la creación de cuentas tipo 'C'
-        // Para PUT, si quisiéramos permitir su edición, lo incluiríamos aquí.
-        // overdraftAmount: parseFloat(document.getElementById('overdraftAmount').value) 
+        balanceAmount: aportePropio // Para POST, este es el saldo inicial propio. El backend ajustará.
+                                  
     };
 
     let url = API_BASE_URL;
@@ -117,13 +144,30 @@ async function handleAccountFormSubmit(event) {
 
     if (accountId) { // Actualización
         accountData.id = parseInt(accountId);
-        // Para PUT, aseguramos que todos los campos del DTO AccountDto estén presentes si es necesario.
-        // El backend en UpdateAccountAsync espera `id`, `accountNumber`, `ownerName`, `accountType`, `balanceAmount`, `overdraftAmount`.
-        // El `balanceAmount` y `overdraftAmount` para la actualización deben ser los valores actuales que se quieren establecer,
-        // no deltas. El AccountService.cs asigna estos directamente.
-        accountData.overdraftAmount = parseFloat(document.getElementById('account-form').elements.namedItem('overdraftAmount')?.value || 0); // Asegurarse de tener este campo si se edita
         url = `${API_BASE_URL}/${accountId}`;
         method = 'PUT';
+        
+    
+        const currentAccountResponse = await fetch(`${API_BASE_URL}/${accountId}`);
+        if (!currentAccountResponse.ok) throw new Error('No se pudo obtener los datos actuales de la cuenta para actualizar.');
+        const currentAccountData = await currentAccountResponse.json();
+
+        accountData.balanceAmount = parseFloat(currentAccountData.balanceAmount); // Enviar el balanceAmount de la BD
+        accountData.overdraftAmount = parseFloat(currentAccountData.overdraftAmount); // Enviar el overdraftAmount de la BD
+        
+        // Si se quisiera permitir cambiar el tipo de cuenta y esto afecta el sobregiro:
+        if (accountData.accountType === 'A' && currentAccountData.accountType === 'C') {
+             // Si cambia de Corriente a Ahorros, el sobregiro debe eliminarse.
+             // El `balanceAmount` debería ser el saldo propio (balance BD - MAX_OVERDRAFT)
+            accountData.balanceAmount = parseFloat(currentAccountData.balanceAmount) - MAX_OVERDRAFT_FRONTEND;
+            accountData.overdraftAmount = 0;
+        } else if (accountData.accountType === 'C' && currentAccountData.accountType === 'A') {
+            // Si cambia de Ahorros a Corriente, se añade el cupo de sobregiro al balance
+            accountData.balanceAmount = parseFloat(currentAccountData.balanceAmount) + MAX_OVERDRAFT_FRONTEND;
+            accountData.overdraftAmount = 0; // Inicialmente no hay sobregiro utilizado
+        }
+
+
     }
 
 
@@ -150,7 +194,7 @@ async function handleAccountFormSubmit(event) {
 }
 
 async function loadAccountForEdit(id) {
-    clearAccountForm(); // Limpiar antes de cargar nuevos datos
+    clearAccountForm(); 
     formFeedback.style.display = 'none';
     try {
         const response = await fetch(`${API_BASE_URL}/${id}`);
@@ -158,30 +202,27 @@ async function loadAccountForEdit(id) {
             const errorData = await response.json().catch(() => ({ Errors: ["Error al obtener detalles de la cuenta."] }));
             throw new Error(`Error ${response.status}: ${(errorData.Errors || [response.statusText]).join(', ')}`);
         }
-        const account = await response.json();
+        const account = await response.json(); // Este account tiene balanceAmount y overdraftAmount de la BD
         
         formTitle.textContent = `Editar Cuenta (ID: ${account.id})`;
         accountIdInput.value = account.id;
         accountNumberInput.value = account.accountNumber;
         ownerNameInput.value = account.ownerName;
         accountTypeInput.value = account.accountType;
-        balanceAmountInput.value = parseFloat(account.balanceAmount).toFixed(2);
+
+        // El campo 'balanceAmountInput' en el form es para "Saldo Inicial (Aporte Propio)"
+        // Necesitamos calcular el aporte propio original para mostrarlo
+        let aportePropioEditable = parseFloat(account.balanceAmount);
+        if (account.accountType === 'C') {
+            aportePropioEditable = parseFloat(account.balanceAmount) - MAX_OVERDRAFT_FRONTEND;
+        }
+        balanceAmountInput.value = aportePropioEditable.toFixed(2);
         
-        // Para la edición, el saldo y sobregiro no deberían ser editables directamente
-        // ya que se modifican mediante transacciones o lógicas específicas del backend.
-        // Por ahora, los mostramos pero podrían ser readonly o no estar en el form de edición.
-        // Si tu lógica de PUT permite cambiar `balanceAmount` y `overdraftAmount` directamente:
-        // (Esto es lo que parece hacer tu `AccountService.UpdateAccountAsync`)
-        // Deberías tener un input para overdraftAmount si quieres editarlo:
-        // document.getElementById('overdraftAmount').value = parseFloat(account.overdraftAmount).toFixed(2);
-        
-        // La creación de cuenta no permite saldo <= 0.
-        // Durante la edición, el balance actual se carga. No se debería poder poner a cero o negativo aquí.
-        // Si es necesario editar el saldo directamente (además de depósitos/retiros), tu backend lo permite.
-        balanceAmountInput.readOnly = false; // O true, según tu lógica de negocio para la edición.
+        // El balance y sobregiro no son directamente editables en este formulario simplificado.
+        // La edición del tipo de cuenta (si cambia de/hacia Corriente) se manejará en handleAccountFormSubmit.
+        balanceAmountInput.readOnly = false; // O true si decides no permitir editar el aporte propio una vez creado.
 
         window.scrollTo({ top: formSection.offsetTop, behavior: 'smooth' });
-
 
     } catch (error) {
         console.error('Error al cargar cuenta para editar:', error);
@@ -196,8 +237,12 @@ async function deleteAccount(id) {
     formFeedback.style.display = 'none';
     try {
         const response = await fetch(`${API_BASE_URL}/${id}`, { method: 'DELETE' });
-        if (!response.ok && response.status !== 204) {
-            const errorData = await response.json().catch(() => ({ Errors: ["Error al eliminar cuenta."] }));
+        if (!response.ok && response.status !== 204) { // 204 No Content es éxito para DELETE
+            // Intenta leer el cuerpo del error solo si no es 204
+            let errorData = { Errors: ["Error al eliminar cuenta."] };
+            if (response.headers.get("content-type")?.includes("application/json")) {
+                 errorData = await response.json().catch(() => errorData);
+            }
             throw new Error(`Error ${response.status}: ${(errorData.Errors || [response.statusText]).join(', ')}`);
         }
         showFeedback(formFeedback, 'Cuenta eliminada exitosamente!', false);
@@ -222,8 +267,8 @@ async function handleTransaction(type) { // type será 'Deposit' o 'Withdrawal'
         return;
     }
 
-    const transactionData = { // Corresponde a TransactionDto
-        id: parseInt(accountId), // El backend espera que el ID en el DTO coincida con el ID en la URL.
+    const transactionData = { 
+        id: parseInt(accountId), 
         accountNumber: accountNumber,
         valueAmount: valueAmount
     };
@@ -237,14 +282,17 @@ async function handleTransaction(type) { // type será 'Deposit' o 'Withdrawal'
             body: JSON.stringify(transactionData),
         });
 
-        if (!response.ok && response.status !== 204) { // 204 No Content es éxito
-            const errorData = await response.json().catch(() => ({ Errors: [`Error al procesar ${type.toLowerCase()}.`] }));
+        if (!response.ok && response.status !== 204) { 
+            let errorData = { Errors: [`Error al procesar ${type.toLowerCase()}.`] };
+             if (response.headers.get("content-type")?.includes("application/json")) {
+                 errorData = await response.json().catch(() => errorData);
+            }
             throw new Error(`Error ${response.status}: ${(errorData.Errors || [response.statusText]).join(', ')}`);
         }
         
         showFeedback(transactionFeedback, `¡${type === 'Deposit' ? 'Depósito' : 'Retiro'} realizado exitosamente!`, false);
         transactionForm.reset();
-        fetchAccounts(); // Actualizar la tabla de cuentas
+        fetchAccounts(); 
     } catch (error) {
         console.error(`Error al realizar ${type.toLowerCase()}:`, error);
         showFeedback(transactionFeedback, `Error al realizar ${type.toLowerCase()}: ${error.message}`, true);
@@ -263,6 +311,6 @@ withdrawBtn.addEventListener('click', () => handleTransaction('Withdrawal'));
 
 // Cargar cuentas al iniciar
 window.addEventListener('DOMContentLoaded', () => {
-    clearAccountForm(); // Asegurar que el formulario esté limpio al cargar
+    clearAccountForm(); 
     fetchAccounts();
 });

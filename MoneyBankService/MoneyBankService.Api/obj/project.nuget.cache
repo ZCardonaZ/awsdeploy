@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oHEfG1AVq4o=",
+  "dgSpecHash": "AJJaRjbHSJw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Api\\MoneyBankService.Api.csproj",
+  "projectFilePath": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Api\\MoneyBankService.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",

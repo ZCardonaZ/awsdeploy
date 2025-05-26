@@ -23,8 +23,9 @@
                         <th>Número de Cuenta</th>
                         <th>Propietario</th>
                         <th>Tipo</th>
-                        <th>Saldo</th>
-                        <th>Sobregiro</th>
+                        <th>Saldo Actual (Fondos Propios)</th>
+                        <th>Sobregiro Utilizado</th>
+                        <th>Cupo Sobregiro Disponible</th>
                         <th>Fecha Creación</th>
                         <th>Acciones</th>
                     </tr>
@@ -56,7 +57,7 @@
                     </select>
                 </div>
                 <div>
-                    <label for="balanceAmount">Saldo Inicial:</label>
+                    <label for="balanceAmount">Saldo Inicial (Aporte Propio):</label>
                     <input type="number" id="balanceAmount" name="balanceAmount" step="0.01" required min="0.01">
                 </div>
                 <button type="submit" id="save-account-btn">Guardar Cuenta</button>

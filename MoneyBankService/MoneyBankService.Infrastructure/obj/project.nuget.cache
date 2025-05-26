@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qpc9U5qIDkI=",
+  "dgSpecHash": "YoVr5Tby8pU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj",
+  "projectFilePath": "c:\\Users\\santi\\Desktop\\awsdeploy\\MoneyBankService\\MoneyBankService.Infrastructure\\MoneyBankService.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
